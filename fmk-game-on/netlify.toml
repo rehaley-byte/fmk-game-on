@@ -1,0 +1,14 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/public/*"
+  to = "/:splat"
+  status = 200
+
+# Optional clean URL for the function
+[[redirects]]
+  from = "/api/headlines"
+  to = "/.netlify/functions/headlines"
+  status = 200

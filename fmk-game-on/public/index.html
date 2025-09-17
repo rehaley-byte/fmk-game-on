@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FMK — Headlines (Netlify)</title>
+  <link rel="stylesheet" href="/public/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>FMK <span class="sub">— the headline game</span></h1>
+    <div class="controls">
+      <label>
+        Category:
+        <select id="category">
+          <option value="mixed" selected>Mixed</option>
+          <option value="world">World</option>
+          <option value="tech">Tech</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="business">Business</option>
+          <option value="entertainment">Culture</option>
+          <option value="environment">Environment</option>
+        </select>
+      </label>
+      <button id="nextBtn">New headline</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="card" class="card">
+      <h2 id="headline">Click “New headline” to start</h2>
+      <p id="byline" class="byline"></p>
+
+      <div class="buttons">
+        <button class="fmk" data-choice="F">🔥 F</button>
+        <button class="fmk" data-choice="M">💍 M</button>
+        <button class="fmk" data-choice="K">💀 K</button>
+      </div>
+
+      <div id="result" class="result hidden">
+        <h3>Round results</h3>
+        <div class="bars">
+          <div><span>🔥 F</span><div class="bar"><div id="barF"></div></div><span id="pctF">0%</span></div>
+          <div><span>💍 M</span><div class="bar"><div id="barM"></div></div><span id="pctM">0%</span></div>
+          <div><span>💀 K</span><div class="bar"><div id="barK"></div></div><span id="pctK">0%</span></div>
+        </div>
+        <p class="note" id="resultNote">Session + baseline crowd</p>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div id="roundInfo">Round: <span id="roundNum">0</span></div>
+      <a id="openLink" href="#" target="_blank" rel="noopener" class="hidden">Open source article ↗</a>
+    </section>
+  </main>
+
+  <script src="/public/app.js"></script>
+</body>
+</html>
